@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Replication of Study 3a by Craig & Richeson (2014, Psychological Science)"
+author: "Anmol Gupta (ganmol [at] stanford [dot] edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
@@ -12,20 +12,27 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+GitHub Repository: <https://github.com/psych251/craig2014_rescue/tree/main>
 
+Craig & Richeson (2014) PDF: <https://github.com/psych251/craig2014_rescue/blob/main/original_paper/craig-richeson-2014-on-the-precipice-of-a-majority-minority-america-perceived-status-threat-from-the-racial-demographic.pdf>
+
+I am planning to replicate Study 3a from the Craig & Richeson (2014) paper examining the impact of racial status threat on White Americans' political ideologies. This is a topic directly related to my research interests in that I am interested broadly in looking at ways to improve understanding of systemic roots of racism and subsequently leveraging those understandings (1) to improve political support for racially equitable social policy and (2) to develop tools to foster a greater sense of agency for people who identify with marginalized identities (e.g., people of color, people with disabilities). Therefore, this project presents an opportunity to delve deeper into the underlying psychological processes which might explain why status threat might lead people to resist embracing equity-minded policy.
+
+In this replication of Study 3a, I will seek to maintain many of the same stimuli and procedures utilized in the original paper. Specifically, following a pre-test of participants' political ideologies, I will randomly assign participants to one of three conditions -- either a control condition, a status-threat condition, or a assuaged threat condition. The stimuli (simulated news articles) will also remain the same across the three condition groups. However, if possible, I would like to pilot/pre-test these stimuli to ensure that (1) they are sufficiently different and that (2) the manipulation is clear and that status threat as a manipulation is operationalized correctly.
+
+While including the original outcome measures of social policies, I would also like to add additional policy examples which are racialized and not racialized. This will ideally help to expand any effects of the manipulation beyond the already tested policies while also ensuring effective operationalization of the main DV. The main challenges posed by this replication are in the piloting of the different news stories which vary by condition as well as ensuring that the policies tested as the main outcome measure are sufficiently perceived as "racialized" policy.
 
 ## Summary of prior replication attempt
 
-Based on the prior write-up, describe any differences between the original and 1st replication in terms of methods, sample, sample size, and analysis. Note any potential problems such as exclusion rates, noisy data, or issues with analysis. 
+Based on the prior write-up, describe any differences between the original and 1st replication in terms of methods, sample, sample size, and analysis. Note any potential problems such as exclusion rates, noisy data, or issues with analysis.
 
 ## Methods
 
 ### Power Analysis
 
-Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size. Considerations of feasibility for selecting planned sample size.
 
-How much power does your planned sample have for original effect? For an attenuated effect that is half the size of the original? 
+How much power does your planned sample have for original effect? For an attenuated effect that is half the size of the original?
 
 (If power analysis is not possible or precise, discuss more fully how you determined a sample size that would be sufficient for rescue.)
 
@@ -35,45 +42,44 @@ Planned sample size and/or termination rule, sampling frame, known demographics 
 
 ### Materials
 
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely. Or, quote directly and just point out exceptions to what was described in the original article.
 
-### Procedure	
+### Procedure
 
-Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+Can quote directly from original article - just put the text in quotations and note that this was followed precisely. Or, quote directly and just point out exceptions to what was described in the original article.
 
 ### Controls
 
 What attention checks, positive or negative controls, or other quality control measures are you adding so that a (positive or negative) result will be more interpretable?
 
-
 ### Analysis Plan
 
-Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
+Can also quote directly, though it is less often spelled out effectively for an analysis strategy section. The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.
 
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+**Clarify key analysis of interest here** You can also pre-specify additional analyses you plan to do.
 
 ### Differences from Original Study and 1st replication
 
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
+Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study. The goal, of course, is to minimize those differences, but differences will inevitably occur. Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
 
 ### Methods Addendum (Post Data Collection)
 
 You can comment this section out prior to final report with data collection.
 
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+
+Sample size, demographics, data exclusions based on rules spelled out in analysis plan
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
 
+Any differences from what was described as the original plan, or "none".
 
 ## Results
-
 
 ### Data preparation
 
 Data preparation following the analysis plan.
-	
+
 ```{r include=F}
 ### Data Preparation
 
@@ -88,27 +94,28 @@ Data preparation following the analysis plan.
 
 ### Results of control measures
 
-How did people perform on any quality control checks or positive and negative controls? 
+How did people perform on any quality control checks or positive and negative controls?
 
 ### Confirmatory analysis
 
-The analyses as specified in the analysis plan.  
+The analyses as specified in the analysis plan.
 
 *Three-panel graph with original, 1st replication, and your replication is ideal here*
 
 ### Exploratory analyses
 
-Any follow-up analyses desired (not required).  
+Any follow-up analyses desired (not required).
 
 ## Discussion
 
 ## Mini meta analysis
-Combining across the original paper, 1st replication, and 2nd replication, what is the aggregate effect size? 
+
+Combining across the original paper, 1st replication, and 2nd replication, what is the aggregate effect size?
 
 ### Summary of Replication Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.
 
 ### Commentary
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt. None of these need to be long.
