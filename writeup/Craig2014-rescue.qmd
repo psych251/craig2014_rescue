@@ -1,0 +1,411 @@
+---
+title: "Replication of Study 3a by Craig & Richeson (2014, Psychological Science)"
+author: "Anmol Gupta (ganmol [at] stanford [dot] edu)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    toc: true
+    toc_depth: 3
+---
+
+## Introduction
+
+The current report is an attempted replication of Study 3a from the Craig & Richeson (2014) paper examining the impact of racial status threat on White Americans' political preferences. 
+
+In this project, I seek to maintain many of the same stimuli and procedures utilized in the original paper. Following a pre-test of participants' political ideologies, participants are randomly assigned to one of two conditions -- either a status-threat condition or an assuaged-threat condition. The stimuli (simulated news articles) will also remain the same across both conditions except for the key manipulation differences. After reading the new articles, participants were then asked to indicate their support for several different social policies with the prediction that White Americans would express greater endorsement of conservative policies after reading a threatening article as compared to the assuaged-threat article.
+
+GitHub Repository: <https://github.com/psych251/craig2014_rescue/tree/main>
+
+Craig & Richeson (2014) PDF: <https://github.com/psych251/craig2014_rescue/blob/main/original_paper/craig-richeson-2014-on-the-precipice-of-a-majority-minority-america-perceived-status-threat-from-the-racial-demographic.pdf>
+
+Survey/Paradigm link: <https://stanforduniversity.qualtrics.com/jfe/form/SV_eP73cWBRH6pANYq>
+
+Pre-registration: <https://osf.io/4gtuq>
+
+## Summary of prior replication attempt
+
+Overall, the first replication failed and did not find significant differences as a function of the article manipulation. The first replication author noted that this may have been a result of a small sample size which would not achieve 80% power. Further, the sample was not balanced in terms of baseline political ideology and was skewed liberal. 
+
+## Methods
+
+### Power Analysis
+
+Using the pwr.t.test() function within the "pwr" R package, I calculated that I need 85 participants/condition to achieve 80% power. Rounding up to 90/condition, I am planning to sample 180 participants. This analysis was completed using the comparison between the status and assuaged threat conditions which was reported in the original paper. 
+
+### Planned Sample
+
+Mirroring the original paper, I recruited one sample of 180 White U.S. citizens from an online survey platform (Prolific). Further, while the original sample was comprised predominantly of male participants (160 men: 20 women), my sample is 91:35 . Once I have reached my target n-size (as determined by a power analysis), I will close the survey. While this sample will not provide a 2.5x replication of the original study, it is significantly larger than the first replication (n=111).
+
+### Materials
+
+I will follow the materials where available for this experiment. This includes the two-item baseline ideology measure, the condition materials (i.e., the news articles, which are linked here: <https://osf.io/vdg46>), and the policy preferences list to assess participants' policy preferences. The one change is the removal of a "support for same-sex marriage" policy item (legalized since the original study was run).  
+
+### Procedure
+
+The procedure for this replication will be followed precisely. As such, participants will, upon providing informed consent, report "their demographic characteristics, including political ideology". Participants will then be randomly assigned "an article about the projected majority-minority shift in the United States (status-threat condition) or the latter article with an extra paragraph designed to reduce status threat (assuaged-threat condition)." Finally, participants will indicate their policy preferences on an seven-item list of policies (Craig & Richeson, 2014). 
+
+### Controls
+
+As in the original study, I will conduct an ANOVA to confirm "that participants in the status-threat condition expressed greater perceived group-status threat than did participants in the assuaged-threat condition" (Craig & Richeson, 2014).
+
+### Analysis Plan
+
+My key analysis of interest will be a two condition t-test. This differs from the original study and the first replication, in that both earlier iterations used ANOVAs to compare the three (assuaged threat, status threat, control) conditions, while I only have 2 conditions in my replication. More specifically, my analysis is contrasting the difference in "conservative policy score" or the standardized total score of individuals' support of different conservative policies between the "assuaged threat" and the "status threat" conditions. In the original study (Craig & Richeson, 2014), this difference was statistically significant (F(1, 161) = 7.63, p = .006, ηp2 = .05). In the first replication, the comparison between the assuaged threat and status threat conditions was not reported, but the overall ANOVA analyzing the effect of condition on policy endorsement was not significant (F(2, 111) = 0.151, p = .86).
+
+## Differences from Original Study and 1st replication
+
+*Differences in sample:* The original study sampled 170 participants across three conditions, with 121 participants combined in the two conditions of interest (62 in status-threat condition; 59 in assuaged-threat condition). The first replication sampled 114 participants across all three conditions (condition breakdown was not reported). In comparison, this replication will sample 180 participants total, only across the status-threat and the assuaged-threat conditions (90 in each condition). 
+
+*Differences in materials:* There are several minor changes in the materials of the study, which are largely the same. One change was to the article manipulation, changing the presented year of when the US would reach "majority-minority" status. The original article, published in 2014, wrote that the US would reach majority-minority status in 2023. To maintain the same time period/future setting, I moved the date to 2033. In addition, one of the policy outcome measures was around support for same-sex marriage, which, since the original study was run, has already become legal in the US. Further, the original study contained several duplicated demographic measures (e.g., age, race, political orientation), which I removed for brevity and time. 
+
+*Differences in analysis:* As described previously, I am focusing on the comparison between the assuaged- and the status-threat conditions. As such, I will utilize a t-test rather than an ANOVA for my main analyses. 
+
+As these are largely material differences or differences to contextualize the manipulation to 2023, I do not expect these differences alone to drive any differences in any observed effects between this replication, the first replication, or the original article. 
+
+### Methods Addendum (Post Data Collection)
+
+In total, I collected 179 responses. One Prolific participant pasted an incorrect completion code and messaged me indicating that they weren't able to complete the survey. In line with class Prolific policies, I paid the participant and did not replace the one response. 
+
+Of the 179 responses I collected, I ran several demographic filters to ensure that the sample was made up of participants who consented, who identify as White American citizens. In addition to these demographic checks, I also ran five additional filters, including four attention checks to ensure participants interpreted the manipulation correctly and one check to see if participants had seen the prime before (participants who answered "yes" were excluded from analysis).
+
+#### Actual Sample
+
+Excluded participants after consent filter: 0
+Excluded participants after citizenship filter: 1
+Excluded participants after residency filter: 1
+Excluded participants after race filter: 2
+Excluded participants after prime repeat filter ("Had you seen the article you read earlier in this study before?"): 10
+Excluded participants after group growth filter ("Which racial group is expected to be the largest contributor to the population growth in the US?"): 23
+Excluded participants after white population change filter ("What is the White population expected to do in the coming decades?"): 23
+Excluded participants after status-threat filter ("In 2042, which group is expected to hold the most societal status/power?" -- participants in the status-threat condition should answer "Racial minorities"): 30
+Excluded participants after assuaged-threat filter ("In 2042, which group is expected to hold the most societal status/power?" -- participants in the assuaged-threat condition should answer "White Americans"): 52
+
+In total, these filters excluded 52 responses leaving me with a total N of 127 White American participants (91 women, 35 men, 1 non-binary).
+
+#### Differences from pre-data collection methods plan
+
+There were no differences here, although the sample was considerably smaller than expected given lower than predicted scores on the comprehension/attention check items which resulted in 29 participants being excluded in the final two comprehension checks. In comparison, the original study only excluded 10 participants from their original sample; only 2 of these 10 participants "incorrectly identified Whites as the group with the fastest increase" (Craig & Richeson, 2014). 
+
+## Results
+
+### Data preparation
+
+First, I plan to clean the Qualtrics datafile of any identifiable or metadata columns. I will focus my dataset on the participants' self-reported demographic and political ideology variables, a variable denoting each participants' randomly assigned condition, and the columns for each individual policy preference item. Participants who incorrectly respond to the attention-check item will be excluded from analysis, as will be participants who did not finish the entire activity.
+
+#### Load Relevant Libraries and Functions
+
+```{r, echo = T}
+library(dplyr)
+library(tidyverse)
+library(psych)
+library(grid)
+library(gridExtra)
+library(png)
+```
+
+#### Import data
+
+```{r, echo = T}
+#import dataset
+RawData <- read.csv("/Users/ganmol/Downloads/craig2014_rescuedata.csv")
+RawData <- RawData[-c(1), ] #delete top two row of metadata
+RawData <- RawData[-c(1), ] #repeat the previous line to delete top two rows of metadata
+```
+
+#### Data exclusion / filtering
+```{r, echo = T}
+data_filter = RawData |> 
+  filter(
+    Consent == 1, # Gave consent
+    Citizen == 1, # US Citizen
+    Residency_1 == 1, #only select US residents
+    Race1 == 3, #only select White participants
+    primeRepeat == 2, #Filter out any participants who have read the stimuli before
+    groupGrowth == "4",     #Each of the following are attention checks
+    whitePopChange != 1 | whitePopChange != 2 | is.na(whitePopChange),
+    !(Condition == "Status Threat" & groupPower == 1),
+    !(Condition == "Assuaged Threat" & groupPower == 2))
+```
+#### Prepare data for analysis - create columns etc.
+
+```{r, echo = T}
+cleaned_data = data_filter |> 
+  select(c(Consent:GenPartyAffiliation, groupGrowth:primeRepeat, Condition)) # select columns for analysis
+
+#convert demographic and DV items to numeric variables
+cleaned_data$Age <- as.numeric(as.character(cleaned_data$Age))
+cleaned_data$Gender1 <- as.numeric(as.character(cleaned_data$Gender1))
+cleaned_data$Education <- as.numeric(as.character(cleaned_data$Education))
+cleaned_data$statusThreatPercept <- as.numeric(as.character(cleaned_data$statusThreatPercept))
+cleaned_data$ConservativeIdeo <- as.numeric(as.character(cleaned_data$ConservativeIdeo))
+cleaned_data$LiberalIdeo <- as.numeric(as.character(cleaned_data$LiberalIdeo))
+cleaned_data$ImmigrantCitizenship <- as.numeric(as.character(cleaned_data$ImmigrantCitizenship))
+cleaned_data$ImmigrationNumber <- as.numeric(as.character(cleaned_data$ImmigrationNumber))
+cleaned_data$MilitaryFund <- as.numeric(as.character(cleaned_data$MilitaryFund))
+cleaned_data$AffirmativeAction <- as.numeric(as.character(cleaned_data$AffirmativeAction))
+cleaned_data$Healthcare <- as.numeric(as.character(cleaned_data$Healthcare))
+cleaned_data$EnglishNationalLang <- as.numeric(as.character(cleaned_data$EnglishNationalLang))
+cleaned_data$Prisons <- as.numeric(as.character(cleaned_data$Prisons))
+```
+
+#### Create new analysis variables 
+```{r, echo = T}
+#creating "baseline political ideology" score
+cleaned_data = cleaned_data |> 
+  mutate(BaselinePolIdeo = (ConservativeIdeo + LiberalIdeo)/2)
+
+#create standardized and composite policy preferences score
+cleaned_data = cleaned_data %>% 
+  mutate(
+  standardImmCiti = (ImmigrantCitizenship-mean(ImmigrantCitizenship))/sd(ImmigrantCitizenship),
+  standardImmNum = (ImmigrationNumber-mean(ImmigrationNumber))/sd(ImmigrationNumber), 
+  standardMilitary = (MilitaryFund -mean(MilitaryFund))/sd(MilitaryFund), 
+  standardAffAct = (AffirmativeAction - mean(AffirmativeAction))/sd(AffirmativeAction), 
+  standardHealth = (Healthcare - mean(Healthcare))/sd(Healthcare), 
+  standardEngLang = (EnglishNationalLang - mean(EnglishNationalLang))/sd(EnglishNationalLang), 
+  standardPrisons = (Prisons - mean(Prisons))/sd(Prisons)
+  )
+
+#create variable for overall conservative policy endorsement score
+cleaned_data = cleaned_data |> 
+  mutate(ConsPolicyScore = (standardImmCiti + standardImmNum + standardMilitary + standardAffAct + standardHealth + standardEngLang + standardPrisons))
+```
+
+### Results of control measures
+
+In this replication, I will use a t-test to confirm "that participants in the status-threat condition expressed greater perceived group-status threat than did participants in the assuaged-threat condition" (Craig & Richeson, 2014). This differs from the original study and the first replication in that I only have two conditions (no control), which thus calls for a t-test approach rather than an ANOVA.
+
+```{r, echo = T}
+# Perform a t-test + print result
+result <- t.test(statusThreatPercept ~ Condition, data = cleaned_data)
+print(result)
+
+#calculate mean of perceived threat
+cleaned_data %>% 
+  group_by(Condition) %>%
+  summarize(
+    mean_statusthreat = mean(statusThreatPercept),
+    sd_statusthreat = sd(statusThreatPercept)
+  ) -> summarised_data
+
+# Create bar chart with error bars
+ggplot(summarised_data, aes(x = Condition, y = mean_statusthreat)) +
+  geom_bar(stat = "identity", fill = "lightblue") +
+  geom_errorbar(aes(ymin = mean_statusthreat - sd_statusthreat,
+                    ymax = mean_statusthreat + sd_statusthreat),
+                width = 0.2,
+                position = position_dodge(0.9),
+                color = "black") +
+  labs(title = "Mean Status Threat by Condition",
+       x = "Condition",
+       y = "Status Threat") +
+  theme_minimal()
+
+
+```
+
+
+### Confirmatory analysis
+
+In analysis, I plan to use a linear model for confirmatory analyses, as I have two conditions and need to control for various covariates (demographics and baseline ideologies). The original paper and replication utilized ANCOVAs for analyses: "Unless otherwise noted, reported analyses for Studies 3a and 3b are ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as co-variates." I used a linear model to examine the reported role of group status threat (the condition assignment) on policy preferences for White Americans, incorporating participants' baseline political ideologies into the model. 
+
+```{r, echo = T}
+model <- lm(ConsPolicyScore ~ Condition + Age + BaselinePolIdeo + Gender1 + Education, data = cleaned_data)
+summary(model)
+```
+```{r}
+#mean scores and SDs for overall policy attitude outcomes
+cleaned_data |> 
+  group_by(Condition) |> 
+  summarize(
+    Mean = mean(ConsPolicyScore), 
+    SD = sd(ConsPolicyScore)
+  )
+```
+There was no effect of condition on policy endorsement between the assuaged threat (M = 0.446, SD = 3.849) and the status threat (M = -0.431, SD = 3.529), although there is a directional trend. 
+
+```{r, echo = T}
+# box plot of policy preferences; more positive scores = more support for conservative policy
+ggplot(cleaned_data, aes(x = Condition, y = ConsPolicyScore)) +
+  geom_boxplot(fill = "gray", color = "black", width = 0.7) +
+  labs(title = "Policy Score by Condition",
+       x = "Condition",
+       y = "PolicyScore") +
+  theme_minimal()
+```
+
+### Exploratory analyses
+
+#### Exploratory Analysis #1: How do policy preferences differ as a function of baseline ideology?
+```{r}
+model <- lm(ConsPolicyScore ~ BaselinePolIdeo, data = cleaned_data) 
+summary(model)
+
+# box plot of policy preferences; more positive scores = more support for conservative policy
+ggplot(cleaned_data, aes(x = BaselinePolIdeo, y = ConsPolicyScore, color = Condition)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(title = "Scatterplot of Conservative Score by Baseline Ideology",
+       x = "Baseline Political Ideology",
+       y = "Conservative Score") + 
+  theme_minimal()
+```
+
+#### Exploratory Analysis #2: How might the results differ without any covariates included in the model?
+```{r}
+model <- lm(ConsPolicyScore ~ Condition, data = cleaned_data) #running linear model with no covariates
+summary(model)
+
+# box plot of policy preferences; more positive scores = more support for conservative policy
+ggplot(cleaned_data, aes(x = Condition, y = ConsPolicyScore)) +
+  geom_boxplot(fill = "gray", color = "black", width = 0.7) +
+  labs(title = "Policy Score by Condition",
+       x = "Condition",
+       y = "PolicyScore") +
+  theme_minimal()
+```
+The effect is still not significant, although moves closer to significance. 
+
+#### Exploratory Analysis #4: What would've happened if I filtered the data differently? Perhaps the comprehension check questions were confusing -- they did not ask participants to make a judgement solely based on the article. In this first analysis, I re-run the mean status threat scores as well as the linear model without filtering out participants by their responses on the final two comprehension checks. After the edits in the filtering code, the subsequent scripts are identical and are thus hidden here for readibility. 
+
+```{r, echo = T}
+data_filter = RawData |> 
+  filter(
+    Consent == 1, # Gave consent
+    Citizen == 1, # US Citizen
+    Residency_1 == 1, #only select US residents
+    Race1 == 3, #only select White participants
+    primeRepeat == 2) #Filter out any participants who have read the stimuli before
+cleaned_data = data_filter |> 
+  select(c(Consent:GenPartyAffiliation, groupGrowth:primeRepeat, Condition)) # select columns for analysis
+cleaned_data = data_filter |> 
+  select(c(Consent:GenPartyAffiliation, groupGrowth:primeRepeat, Condition)) # select columns for analysis
+```
+
+
+```{r, echo = F}
+#convert demographic and DV items to numeric variables
+cleaned_data$Age <- as.numeric(as.character(cleaned_data$Age))
+cleaned_data$Gender1 <- as.numeric(as.character(cleaned_data$Gender1))
+cleaned_data$Education <- as.numeric(as.character(cleaned_data$Education))
+cleaned_data$statusThreatPercept <- as.numeric(as.character(cleaned_data$statusThreatPercept))
+cleaned_data$ConservativeIdeo <- as.numeric(as.character(cleaned_data$ConservativeIdeo))
+cleaned_data$LiberalIdeo <- as.numeric(as.character(cleaned_data$LiberalIdeo))
+cleaned_data$ImmigrantCitizenship <- as.numeric(as.character(cleaned_data$ImmigrantCitizenship))
+cleaned_data$ImmigrationNumber <- as.numeric(as.character(cleaned_data$ImmigrationNumber))
+cleaned_data$MilitaryFund <- as.numeric(as.character(cleaned_data$MilitaryFund))
+cleaned_data$AffirmativeAction <- as.numeric(as.character(cleaned_data$AffirmativeAction))
+cleaned_data$Healthcare <- as.numeric(as.character(cleaned_data$Healthcare))
+cleaned_data$EnglishNationalLang <- as.numeric(as.character(cleaned_data$EnglishNationalLang))
+cleaned_data$Prisons <- as.numeric(as.character(cleaned_data$Prisons))
+
+#creating "baseline political ideology" score
+cleaned_data = cleaned_data |> 
+  mutate(BaselinePolIdeo = (ConservativeIdeo + LiberalIdeo)/2)
+
+#create standardized and composite policy preferences score
+cleaned_data = cleaned_data %>% 
+  mutate(
+  standardImmCiti = (ImmigrantCitizenship-mean(ImmigrantCitizenship))/sd(ImmigrantCitizenship),
+  standardImmNum = (ImmigrationNumber-mean(ImmigrationNumber))/sd(ImmigrationNumber), 
+  standardMilitary = (MilitaryFund -mean(MilitaryFund))/sd(MilitaryFund), 
+  standardAffAct = (AffirmativeAction - mean(AffirmativeAction))/sd(AffirmativeAction), 
+  standardHealth = (Healthcare - mean(Healthcare))/sd(Healthcare), 
+  standardEngLang = (EnglishNationalLang - mean(EnglishNationalLang))/sd(EnglishNationalLang), 
+  standardPrisons = (Prisons - mean(Prisons))/sd(Prisons)
+  )
+
+#create variable for overall conservative policy endorsement score
+cleaned_data = cleaned_data |> 
+  mutate(ConsPolicyScore = (standardImmCiti + standardImmNum + standardMilitary + standardAffAct + standardHealth + standardEngLang + standardPrisons))
+```
+
+
+```{r, echo = T}
+# Perform a t-test + print result
+result <- t.test(statusThreatPercept ~ Condition, data = cleaned_data)
+print(result)
+
+#calculate mean of perceived threat
+cleaned_data %>% 
+  group_by(Condition) %>%
+  summarize(
+    mean_statusthreat = mean(statusThreatPercept),
+    sd_statusthreat = sd(statusThreatPercept)
+  ) -> summarised_data
+
+# Create bar chart with error bars
+ggplot(summarised_data, aes(x = Condition, y = mean_statusthreat)) +
+  geom_bar(stat = "identity", fill = "gray", color = "black") +
+  geom_errorbar(aes(ymin = mean_statusthreat - sd_statusthreat,
+                    ymax = mean_statusthreat + sd_statusthreat),
+                width = 0.2,
+                position = position_dodge(0.9),
+                color = "black") +
+  labs(title = "Mean Status Threat by Condition",
+       x = "Condition",
+       y = "Status Threat") +
+  theme_minimal()
+```
+
+
+```{r, echo = T}
+exp_model <- lm(ConsPolicyScore ~ Condition + Age + BaselinePolIdeo + Gender1 + Education, data = cleaned_data) #running linear model 
+summary(exp_model)
+
+# box plot of policy preferences; more positive scores = more support for conservative policy
+ggplot(cleaned_data, aes(x = Condition, y = ConsPolicyScore)) +
+  geom_boxplot(fill = "gray", color = "black", width = 0.7) +
+  labs(title = "Policy Score by Condition",
+       x = "Condition",
+       y = "PolicyScore") +
+  theme_minimal()
+```
+
+The results are still not significant, and actually seem to move closer to the same mean scores. 
+
+## Discussion
+
+## Mini meta analysis
+
+I did not find any additional replications of the Craig & Richeson paper, so I'm calculating and contrasting the Cohen's F for the original paper and the first replication. I'm unsure what is the significance of these differences in the F-sizes, as the original paper and my rescue had similar F-sizes, but very different significance results. I wasn't able to figure out how to create the forest plot, but I'm happy to work together on figuring that out for the rescue paper. 
+
+```{r}
+# Function to calculate Cohen's f from eta-squared values from original paper and from the first replication
+cohen_f_from_eta_squared <- function(eta_squared) {
+  return(sqrt(eta_squared / (1 - eta_squared)))
+}
+
+# Eta-squared values from your ANOVA analyses
+eta_squared_original <- .05
+eta_squared_rep <- 0.0025564712
+
+# Calculate Cohen's f for each eta-squared value
+cohen_f_1 <- cohen_f_from_eta_squared(eta_squared_original)
+cohen_f_2 <- cohen_f_from_eta_squared(eta_squared_rep)
+
+# Extract R-squared and degrees of freedom from the rescue regression model
+R_squared <- summary(model)$r.squared
+df_regression <- length(coefficients(model)) - 1
+df_residuals <- df.residual(model)
+
+# Calculate Cohen's f for rescue
+cohen_f <- sqrt(R_squared / (1 - R_squared) * (df_regression / df_residuals))
+
+# Print the result
+cat("Cohen's f for Original Study:", cohen_f_1, "\n")
+cat("Cohen's f for Replication 1:", cohen_f_2, "\n")
+cat("Cohen's f for the Rescue:", cohen_f, "\n")
+
+```
+
+### Summary of Replication Attempt
+
+In all, the original findings did not replicate, mirroring the conclusions from the first replication project. Specifically, neither the key confirmatory test, a t-test comparing policy preference scores between the status-threat and assuaged-threat conditions, nor the control test, a t-test comparing the mean status threat scores between the status-threat and the assuaged-threat conditions, were statistically significant. As such, this was a failed replication. In all, I would score this as a 0 ("far" closeness) in terms of the success of the replication. 
+
+### Commentary
+
+One key driver of the failure to replicate may have been the smaller-than-expected sample size. It's unclear why so many participants failed the comprehension check in this trial, while very few failed the same check in the original and in the first replication. Given the increasingly polarized political climate, future research may need to ensure that such an article manipulation is a sufficient prime if there is already increased baseline levels of status threat for White Americans. 
+
+Exploratory analysis provide some early insight into why this replication may have failed. While excluded participants may have played a role in the reduced sample size, the main issue seemed to be the efficacy of the article stimuli in sufficiently manipulating perceptions of status threat.
+
