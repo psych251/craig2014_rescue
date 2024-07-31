@@ -26,6 +26,8 @@ Pre-registration: <https://osf.io/4gtuq>
 
 Overall, the first replication failed and did not find significant differences as a function of the article manipulation. The first replication author noted that this may have been a result of a small sample size which would not achieve 80% power. Further, the sample was not balanced in terms of baseline political ideology and was skewed liberal. 
 
+The first replication did not have any major method differences. It changed the demographic categories and removed questions not needed for the analysis. 
+
 ## Methods
 
 ### Power Analysis
@@ -107,7 +109,7 @@ library(png)
 
 ```{r, echo = T}
 #import dataset
-RawData <- read.csv("/Users/ganmol/Downloads/craig2014_rescuedata.csv")
+RawData <- read.csv("../data/craig2014_rescuedata.csv")
 RawData <- RawData[-c(1), ] #delete top two row of metadata
 RawData <- RawData[-c(1), ] #repeat the previous line to delete top two rows of metadata
 ```
@@ -366,6 +368,41 @@ The results are still not significant, and actually seem to move closer to the s
 
 ## Discussion
 
+Side by side graphs:
+
+Original study does not have a graph. 
+
+Key result on the difference between the "assuaged threat" and "status threat" : "participants
+in the status-threat condition reported more support for
+conservative policy positions than did participants in
+the assuaged-threat condition, F(1, 161) = 7.63, p = .006" marginal means: assuaged: -.08 (se:.06), status threat .15 (se: .06)
+
+Replication:
+
+```{r}
+knitr::include_graphics("replication_graph.png")
+```
+Assuaged Threat: mean -.721 (sd 3.82); Status threat: mean .271 (sd 3.51)
+
+Rescue:
+```{r, echo = T}
+# box plot of policy preferences; more positive scores = more support for conservative policy
+ggplot(cleaned_data, aes(x = Condition, y = ConsPolicyScore)) +
+  geom_boxplot(fill = "gray", color = "black", width = 0.7) +
+  labs(title = "Policy Score by Condition",
+       x = "Condition",
+       y = "PolicyScore") +
+  theme_minimal()
+```
+
+```{r}
+cleaned_data |> 
+  group_by(Condition) |> 
+  summarize(
+    Mean = mean(ConsPolicyScore), 
+    SD = sd(ConsPolicyScore)
+  )
+```
 ## Mini meta analysis
 
 I did not find any additional replications of the Craig & Richeson paper, so I'm calculating and contrasting the Cohen's F for the original paper and the first replication. I'm unsure what is the significance of these differences in the F-sizes, as the original paper and my rescue had similar F-sizes, but very different significance results. I wasn't able to figure out how to create the forest plot, but I'm happy to work together on figuring that out for the rescue paper. 
